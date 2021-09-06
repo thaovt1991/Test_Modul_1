@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm các kí tự nguyên âm</title>
+</head>
+
+<body>
+    <script>
+        function findVowelCharacter(arr) {
+            let char = ["a", "o", "e", "u", "i", "A", "O", "E", "U", "I"]
+            let count = 0 ;
+            for (let i = 0; i < arr.length; i++) {
+                if (char.indexOf(arr[i]) != -1) {
+                    count++
+                }
+            }
+            if (count != 0) {
+                return count;
+            } else
+                return false;
+
+        }
+
+        let strTest = prompt("Nhập chuỗi bất kì !").split("");
+        let test = findVowelCharacter(strTest);
+        if (test != false) {
+            alert("Trong chuỗi có " + test + " kí tự nguyên âm !")
+        } else { alert("Trong chuỗi không có kí tự nguyên âm nào") }
+
+    </script>
+</body>
+
+</html>
